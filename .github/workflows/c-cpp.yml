@@ -20,7 +20,7 @@ jobs:
       
       - name: Install libedit
         run: |
-          apt install libedit-dev
+          sudo apt install libedit-dev
              
       - name: Checkout repo
         uses: actions/checkout@v3
