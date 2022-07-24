@@ -32,6 +32,10 @@ jobs:
           cd $GITHUB_WORKSPACE/src/
           make all
           mv kerf kerf-linux
+      
+      - name: set env
+        run: echo '::set-env name=LD_LIBRARY_PATH::/usr/local/lib'
+        
       - name: Test kerf
         timeout-minutes: 1 # It is an interactive test, otherwise, a tool like expect should be used
         continue-on-error: true
